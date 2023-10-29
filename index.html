@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Instagram feed con Bootstrap</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+</head>
+
+<body>
+    <!--navBar-->
+    <nav class="container-fluid bg-light d-flex justify-content-between">
+        <div class="d-flex align-self-center grid gap-1">
+            <i class="bi bi-instagram"></i>
+            <h5 class="mb-0">Instagram</h5>
+        </div>
+        <div class="d-flex p-2 grid gap-2">
+            <!-- Button trigger modal -->
+            <button type="button" class="btn btn-success btn-sm" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                Create a new post
+            </button>
+
+            <!-- Modal -->
+            <div class=" modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+                aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Create a new post</h5>
+                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                        </div>
+                        <div class="modal-body">
+                            <h6>Caption:</h6>
+                            <div class="form-floating">
+                                <textarea class="form-control" placeholder="Leave a comment here" id="floatingTextarea2"
+                                    style="height: 70px"></textarea>
+                                <label for="floatingTextarea2">Add the caption of your post here</label>
+                            </div>
+                            <div class="d-flex mt-2">
+                                <div class="border border-dark rounded bg-secondary px-2 py-1">
+                                    <i class="bi bi-camera-fill"></i>
+                                </div>
+                                <div class="border border-dark rounded bg-secondary px-2 py-1 ms-1">
+                                    <i class="bi bi-geo-alt-fill"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                            <button type="button" class="btn btn-success">Publish</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--dropDown-->
+            <div class="dropdown">
+                <button class="btn btn-secondary btn-sm dropdown-toggle" type="button" id="dropdownMenuButton1"
+                    data-bs-toggle="dropdown" aria-expanded="false">
+                    <i class="bi bi-gear-fill"></i>
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                    <li><a class="dropdown-item" href="#">Profile</a></li>
+                    <li><a class="dropdown-item" href="#">Accesibility</a></li>
+                    <li><a class="dropdown-item" href="#">Privacy and Data</a></li>
+                    <hr class="m-2">
+                    <li><a class="dropdown-item text-danger" href="#">Log out</a></li>
+                </ul>
+            </div>
+    </nav>
+    <!--btn-->
+    <ul class="nav nav-pills mb-3 d-flex justify-content-center p-2 grid gap-2" id="pills-tab" role="tablist">
+        <li class="nav-item" role="presentation">
+            <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" data-bs-target="#pills-home"
+                type="button" role="tab" aria-controls="pills-home" aria-selected="true"><i
+                    class="bi bi-grid-3x3"></i></button>
+        </li>
+        <li class="nav-item" role="presentation">
+            <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile"
+                type="button" role="tab" aria-controls="pills-profile" aria-selected="false"><i
+                    class="bi bi-square"></i></button>
+        </li>
+    </ul>
+
+
+    <div class="tab-content" id="pills-tabContent">
+        <!--btn-grid-->
+        <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab"
+            tabindex="0">
+            <div class="row m-auto">
+                <div class="col-6 col-md-4 container text-center mb-2">
+                    <img src="https://picsum.photos/400/300" alt="" class="img-fluid">
+                </div>
+                <div class="col-6 col-md-4 container text-center mb-2">
+                    <img src="https://picsum.photos/400/301" alt="" class="img-fluid">
+                </div>
+                <div class="col-6 col-md-4 container text-center mb-2">
+                    <img src="https://picsum.photos/400/302" alt="" class="img-fluid">
+                </div>
+                <div class="col-6 col-md-4  container text-center mb-2">
+                    <img src="https://picsum.photos/400/303" alt="" class="img-fluid">
+                </div>
+
+                <div class="col-6 col-md-4 container text-center mb-2">
+                    <img src="https://picsum.photos/400/304" alt="" class="img-fluid">
+                </div>
+                <div class="col-6 col-md-4 container text-center mb-2">
+                    <img src="https://picsum.photos/400/305" alt="" class="img-fluid">
+                </div>
+                <div class="col-6 col-md-4 container text-center mb-2">
+                    <img src="https://picsum.photos/400/306" alt="" class="img-fluid">
+                </div>
+                <div class="col-6 col-md-4 container text-center mb-2">
+                    <img src="https://picsum.photos/400/307" alt="" class="img-fluid">
+                </div>
+                <div class="col-12 col-md-4 container text-center mb-2">
+                    <img src="https://picsum.photos/400/308" alt="" class="img-fluid">
+                </div>
+            </div>
+
+        </div>
+        <!--btn-square-->
+        <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab" tabindex="0">
+            <main>
+                <div class="container">
+                    <div class="row">
+                        <div class="card m-auto mb-4" style="width: 40rem;">
+                            <div class="d-flex justify-content-between p-2">
+                                <h4 class="fs-5">First photo</h4>
+                                <p>08/26</p>
+                            </div>
+                            <div>
+                                <img src="https://picsum.photos/600/600" class="w-100" alt="...">
+                            </div>
+                            <div class="p-2 fs-6">
+                                <p><b>2,000 likes</b></p>
+                                <p>This is an example of a very good photo that you can post on instagram</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="card m-auto mb-4" style="width: 40rem;">
+                            <div class="d-flex justify-content-between p-2">
+                                <h4 class="fs-5">Second photo</h4>
+                                <p>04/09</p>
+                            </div>
+                            <div>
+                                <img src="https://picsum.photos/600/601" class="w-100" alt="...">
+                            </div>
+                            <div class="p-2 fs-6">
+                                <p><b>100 likes</b></p>
+                                <p>This is an example of a very good photo that you can post on instagram</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="card m-auto mb-4" style="width: 40rem;">
+                            <div class="d-flex justify-content-between p-2">
+                                <h4 class="fs-5">Third photo</h4>
+                                <p>06/10</p>
+                            </div>
+                            <div>
+                                <img src="https://picsum.photos/600/801" class="w-100" alt="...">
+                            </div>
+                            <div class="p-2 fs-6">
+                                <p><b>100,000 likes</b></p>
+                                <p>This is an example of a very good photo that you can post on instagram</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        </div>
+        </main>
+    </div>
+    </div>
+
+    <!--scripts-->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+        integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
